@@ -14,3 +14,111 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+$primary-dark: #0057b7;
+$primary-main: #00b0ff;
+$primary-light: #b8ecff;
+$secondary-dark: #00a238;
+$secondary-main: #00e676;
+$secondary-light: #aafff6;
+
+.shadowless {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.tabs-md .tab-button {
+    background-color: $secondary-dark;
+    color: $primary-light;
+}
+
+.tabs-md .tab-button[aria-selected=true] {
+    color: white;
+}
+
+.tabs-md .tab-button-icon {
+    color: $primary-light;
+}
+
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+    color: white;
+}
+
+.toolbar-title-md {
+    text-align: center;
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+.leftAlign {
+    text-align: left;
+    float: left;
+}
+
+.rightAlign {
+    text-align: right;
+    float: right;
+}
+
+.centerAlign {
+    text-align: center;
+    float: none;
+    margin: auto;
+}
+
+.radio-md {
+    opacity: 0;
+}
+
+.list-md .input-wrapper {
+    margin: 10px 0;
+}
+
+.item-radio .input-wrapper {
+    background-color: $primary-main;
+    text-align: center;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    margin: 10px 0;
+}
+
+.item-radio-checked .input-wrapper {
+    background-color: $primary-light;
+}
+
+.item-radio .label-md {
+    color: black;
+}
+
+.item-radio-checked.item-md .label-md {
+    color: black;
+}
+
+.item-md .slideButton {
+    height: 40px;
+    padding: 20px;
+}
+
+.item-md .calcButton {
+    font-size: 1.6rem;
+    padding: 30px;
+}
+
+.item-md .restartButton {
+    font-size: 1.4rem;
+    padding: 25px;
+}
+
+.bodyfatButton {
+    margin: 10px;
+}
+
+p {
+    text-align: center;
+}
+
+.toolbar-background-md {
+    background: $primary-dark;
+}
