@@ -1,5 +1,5 @@
-import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { NavController, Slides } from 'ionic-angular';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { NavController, Slides, Content } from 'ionic-angular';
 
 import { profileData } from '../../app/profile-data';
 
@@ -51,16 +51,21 @@ export class MacroPage implements OnInit {
     console.log(this.slideThreeInfo);
   }
 
+  @ViewChild(Content) content: Content;
+
   nextSlide() {
     this.slides.slideNext(250);
+    this.content.scrollToTop();
   }
 
   prevSlide() {
     this.slides.slidePrev(250);
+    this.content.scrollToTop();
   }
   
   restart() {
     this.slides.slideTo(0, 500);
+    this.content.scrollToTop();
   }
 
   calculate() {
@@ -85,7 +90,7 @@ export class MacroPage implements OnInit {
     if ( this.profile.goalmod == 1.15 ) {
       this.profile.proteinratio = .82;
     }
-    this.profile.proteingram = Math.round( this.profile.finalleanmass * this.profile.proteinratio * 100 ) / 100;
+    this.profile.proteingram = Math.round( this.profile.weight * this.profile.proteinratio * 100 ) / 100;
     this.profile.proteincaltotal = this.profile.proteingram * this.profile.proteincal;
     this.profile.proteinper = Math.round( ( this.profile.proteincaltotal / this.profile.calgoalbase ) * 10000 ) / 100;
     this.profile.proteinperex = Math.round( ( this.profile.proteincaltotal / this.profile.calgoalex ) * 10000 ) / 100;

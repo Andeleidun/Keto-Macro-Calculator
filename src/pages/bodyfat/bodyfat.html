@@ -5,18 +5,20 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding text-wrap>
+<ion-content padding text-wrap id="bodyfatpage">
   <ion-card>
     <ion-card-content>
       <ion-row>
-        <ion-item col-6>
+        <ion-item>
           <ion-label fixed>Gender</ion-label>
           <ion-select [(ngModel)]="profile.gender">
             <ion-option value="male">Male</ion-option>
             <ion-option value="female">Female</ion-option>
           </ion-select>
         </ion-item>
-        <ion-item col-6>
+        </ion-row>
+        <ion-row>
+        <ion-item>
             <ion-label floating>Weight</ion-label>
             <ion-input type="number" [(ngModel)]="profile.weight"></ion-input>
           </ion-item>
@@ -42,7 +44,7 @@
         </ion-item>
       </ion-row>
       <ion-row>
-          <ion-item col-6 [ngClass]="{'hide' : profile.gender == 'male'}">
+          <ion-item [ngClass]="{'hide' : profile.gender == 'male'}">
             <ion-label floating>Waist - Inches</ion-label>
             <ion-input type="number" [(ngModel)]="profile.waist"></ion-input>
           </ion-item>
@@ -73,7 +75,7 @@
     </ion-card-content>
   </ion-card>
   <ion-row>
-      <button ion-button icon-only class="centerAlign" (click)="showBodyFatInfo()">
+      <button ion-button icon-only block class="centerAlign" (click)="showBodyFatInfo()">
           <ion-icon name="information-circle"></ion-icon>
       </button>
   </ion-row>

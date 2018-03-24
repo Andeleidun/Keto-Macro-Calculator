@@ -5,7 +5,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content text-wrap>
+<ion-content text-wrap id="macropage">
   <ion-card class="shadowless">
         <ion-slides>
             <ion-slide>
@@ -32,16 +32,12 @@
                     </ion-row>
                   </ion-card>
               <ion-row>
-                  <button ion-button icon-only class="centerAlign" (click)="showSlideOneInfo()">
+                  <button ion-button icon-only block class="centerAlign" (click)="showSlideOneInfo()">
                       <ion-icon name="information-circle"></ion-icon>
                   </button>
               </ion-row>
               <ion-card [ngClass]="{'hide' : this.slideOneInfo != 'show'}">
                   <p>
-                      Weight is to be in pounds.
-                      <br/>
-                      Body fat percentage may be determined in a number of ways, including with the accompanying calculator.
-                      <br/>
                       While this calculator will give the most optimum results for a completely accurate body fat percentage, an estimate within a few percent will still provide calorie and macro recommendations that will allow you to achieve your goals.
                   </p>
               </ion-card>
@@ -146,13 +142,13 @@
                         </ion-item>
                   </ion-card>
                   <ion-row>
-                      <button ion-button icon-only class="centerAlign" (click)="showSlideThreeInfo()">
+                      <button ion-button icon-only block class="centerAlign" (click)="showSlideThreeInfo()">
                           <ion-icon name="information-circle"></ion-icon>
                       </button>
                   </ion-row>
                   <ion-card [ngClass]="{'hide' : this.slideThreeInfo != 'show'}">
                         <ion-row>
-                            <ion-item col-12>
+                            <ion-item col-12 class="justify">
                             <p>
                               Weight loss and muscle gain will give different ratios for macronutrients.
                               <br/>
