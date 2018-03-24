@@ -9,76 +9,91 @@
   <ion-card>
     <ion-card-content>
       <ion-row>
-        <ion-item>
+        <ion-item col-6>
           <ion-label fixed>Gender</ion-label>
           <ion-select [(ngModel)]="profile.gender">
             <ion-option value="male">Male</ion-option>
             <ion-option value="female">Female</ion-option>
           </ion-select>
         </ion-item>
+        <ion-item col-6>
+            <ion-label floating>Weight</ion-label>
+            <ion-input type="number" [(ngModel)]="profile.weight"></ion-input>
+          </ion-item>
       </ion-row>
       <ion-row>
-        <ion-item col-4>
-          <ion-label floating>Weight</ion-label>
-          <ion-input type="number" [(ngModel)]="profile.weight"></ion-input>
-        </ion-item>
-        <ion-item col-4>
+        <ion-item col-6>
           <ion-label floating>Height - Feet</ion-label>
           <ion-input type="number" [(ngModel)]="profile.heightfeet"></ion-input>
         </ion-item>
-        <ion-item col-4>
+        <ion-item col-6>
           <ion-label floating>Height - Inches</ion-label>
           <ion-input type="number" [(ngModel)]="profile.heightinches"></ion-input>
         </ion-item>
       </ion-row>
       <ion-row>
-        <ion-item col-4>
+        <ion-item col-6>
           <ion-label floating>Abdomen - Inches</ion-label>
           <ion-input type="number" [(ngModel)]="profile.abdomen"></ion-input>
         </ion-item>
-        <ion-item col-4>
+        <ion-item col-6>
           <ion-label floating>Neck - Inches</ion-label>
           <ion-input type="number" [(ngModel)]="profile.neck"></ion-input>
         </ion-item>
-        <ion-item col-4 [ngClass]="{'hide' : profile.gender == 'male'}">
-          <ion-label floating>Waist - Inches</ion-label>
-          <ion-input type="number" [(ngModel)]="profile.waist"></ion-input>
-        </ion-item>
       </ion-row>
       <ion-row>
-        <button ion-button (click)="calculateMale()" [ngClass]="{'hide' : profile.gender == 'female'}" class="bodyfatButton">
-          Calculate
-        </button>
-        <button ion-button (click)="calculateFemale()" [ngClass]="{'hide' : profile.gender == 'male'}" class="bodyfatButton">
-            Calculate
-        </button>
+          <ion-item col-6 [ngClass]="{'hide' : profile.gender == 'male'}">
+            <ion-label floating>Waist - Inches</ion-label>
+            <ion-input type="number" [(ngModel)]="profile.waist"></ion-input>
+          </ion-item>
+      </ion-row>
+      <ion-row>
+          <ion-item class="centerAlign">
+              <button ion-button (click)="calculateMale()" [ngClass]="{'hide' : profile.gender == 'female'}" class="bodyfatButton">
+                  Calculate
+                </button>
+            </ion-item>
+            <ion-item class="centerAlign">
+                <button ion-button (click)="calculateFemale()" [ngClass]="{'hide' : profile.gender == 'male'}" class="bodyfatButton">
+                    Calculate
+                </button>
+              </ion-item>
       </ion-row>
       <hr/>
       <ion-row>
-        <ion-item col-4>
+        <ion-item col-6>
           <ion-label floating>Body Fat Percentage</ion-label>
           <ion-input type="number" [(ngModel)]="profile.finalfatper"></ion-input>
         </ion-item>
-        <ion-item col-4>
-          <ion-label floating>Body Fat Mass</ion-label>
-          <ion-input type="number" [(ngModel)]="profile.finalfatmass"></ion-input>
-        </ion-item>
-        <ion-item col-4>
+        <ion-item col-6>
           <ion-label floating>Lean Mass</ion-label>
           <ion-input type="number" [(ngModel)]="profile.finalleanmass"></ion-input>
         </ion-item>
       </ion-row>
     </ion-card-content>
   </ion-card>
-  <ion-card>
-    <ion-card-content>
-      <p>
-        This body fat estimator uses the US Navy method for estimating rough body fat percentage.
-        <br/>
-        For most adults, the results are accurate to within 1-3%. For quick and easy estimation, it's generally sufficient.
-        <br/>
-        However, there are more accurate methods such as hydrostatic weighing, skin callipers, and bioelectrical impedance.
-      </p>
-    </ion-card-content>
-</ion-card>
+  <ion-row>
+      <button ion-button icon-only class="centerAlign" (click)="showBodyFatInfo()">
+          <ion-icon name="information-circle"></ion-icon>
+      </button>
+  </ion-row>
+  <ion-card [ngClass]="{'hide' : this.bodyFatInfo != 'show'}">
+        <ion-row>
+            <ion-item col-12>
+            <p>
+                This body fat estimator uses the US Navy method for estimating rough body fat percentage.
+                <br/>
+                For most adults, the results are accurate to within 1-3%. For quick and easy estimation, it's generally sufficient.
+                <br/>
+                However, there are more accurate methods such as hydrostatic weighing, skin callipers, and bioelectrical impedance.
+                <br/>
+                Men should measure their waist around the navel, and women should measure at the narrowest width.
+                <br/>
+                Measure your neck around the base, below the Adam's Apple for men.
+                <br/>
+                For women, measure your hips around the largest width.
+            </p>
+            </ion-item>
+          </ion-row>
+  </ion-card>
 </ion-content>

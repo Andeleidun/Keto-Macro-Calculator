@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { NavController, Slides } from 'ionic-angular';
 
 import { profileData } from '../../app/profile-data';
@@ -19,6 +19,36 @@ export class MacroPage implements OnInit {
 
   constructor(public navCtrl: NavController) {
     
+  }
+
+  slideOneInfo: string;
+
+  showSlideOneInfo() {
+    let doOnce = 0;
+    if (this.slideOneInfo != "show" && doOnce == 0) {
+      this.slideOneInfo = "show";
+      doOnce++
+    }
+    if (this.slideOneInfo == "show" && doOnce == 0) {
+      this.slideOneInfo = "hide";
+      doOnce++;
+    }
+    console.log(this.slideOneInfo);
+  }
+
+  slideThreeInfo: string;
+
+  showSlideThreeInfo() {
+    let doOnce = 0;
+    if (this.slideThreeInfo != "show" && doOnce == 0) {
+      this.slideThreeInfo = "show";
+      doOnce++
+    }
+    if (this.slideThreeInfo == "show" && doOnce == 0) {
+      this.slideThreeInfo = "hide";
+      doOnce++;
+    }
+    console.log(this.slideThreeInfo);
   }
 
   nextSlide() {

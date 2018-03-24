@@ -19,6 +19,21 @@ export class BodyFatPage implements OnInit {
     
   }
 
+  bodyFatInfo: string;
+
+  showBodyFatInfo() {
+    let doOnce = 0;
+    if (this.bodyFatInfo != "show" && doOnce == 0) {
+      this.bodyFatInfo = "show";
+      doOnce++
+    }
+    if (this.bodyFatInfo == "show" && doOnce == 0) {
+      this.bodyFatInfo = "hide";
+      doOnce++;
+    }
+    console.log(this.bodyFatInfo);
+  }
+
   ngOnInit() {
   }
 
