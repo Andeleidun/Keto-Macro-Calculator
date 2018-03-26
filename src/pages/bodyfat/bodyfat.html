@@ -19,33 +19,33 @@
         </ion-row>
         <ion-row>
         <ion-item>
-            <ion-label floating>Weight</ion-label>
+            <ion-label floating>Weight - Lbs</ion-label>
             <ion-input type="number" [(ngModel)]="profile.weight"></ion-input>
           </ion-item>
       </ion-row>
       <ion-row>
         <ion-item col-6>
-          <ion-label floating>Height - Feet</ion-label>
+          <ion-label floating>Height - Ft</ion-label>
           <ion-input type="number" [(ngModel)]="profile.heightfeet"></ion-input>
         </ion-item>
         <ion-item col-6>
-          <ion-label floating>Height - Inches</ion-label>
+          <ion-label floating>Height - In</ion-label>
           <ion-input type="number" [(ngModel)]="profile.heightinches"></ion-input>
         </ion-item>
       </ion-row>
       <ion-row>
         <ion-item col-6>
-          <ion-label floating>Abdomen - Inches</ion-label>
+          <ion-label floating>Abdomen - In</ion-label>
           <ion-input type="number" [(ngModel)]="profile.abdomen"></ion-input>
         </ion-item>
         <ion-item col-6>
-          <ion-label floating>Neck - Inches</ion-label>
+          <ion-label floating>Neck - In</ion-label>
           <ion-input type="number" [(ngModel)]="profile.neck"></ion-input>
         </ion-item>
       </ion-row>
       <ion-row>
           <ion-item [ngClass]="{'hide' : profile.gender == 'male'}">
-            <ion-label floating>Waist - Inches</ion-label>
+            <ion-label floating>Waist - In</ion-label>
             <ion-input type="number" [(ngModel)]="profile.waist"></ion-input>
           </ion-item>
       </ion-row>
@@ -64,7 +64,7 @@
       <hr/>
       <ion-row>
         <ion-item col-6>
-          <ion-label floating>Body Fat Percentage</ion-label>
+          <ion-label floating>Body Fat %</ion-label>
           <ion-input type="number" [(ngModel)]="profile.finalfatper"></ion-input>
         </ion-item>
         <ion-item col-6>
