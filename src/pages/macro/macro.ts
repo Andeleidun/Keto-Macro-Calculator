@@ -69,26 +69,36 @@ export class MacroPage implements OnInit {
   }
 
   calculate() {
+    if ( this.profile.goaltype == "maintenance" ) {
+      this.profile.goalmod = 1;
+    }
     this.profile.finalfatmass = this.profile.weight * ( this.profile.finalfatper / 100 );
     this.profile.finalleanmass = this.profile.weight - this.profile.finalfatmass;
-    this.profile.bmr = 370 + ( 9.79 * this.profile.finalleanmass );
+    if ( this.profile.units == "american" ) {
+      this.profile.bmr = 370 + ( 9.79 * this.profile.finalleanmass );
+      this.profile.proteinratiom = 1;
+    }
+    if ( this.profile.units == "metric" ) {
+      this.profile.bmr = 370 + ( 21.6 * this.profile.finalleanmass );
+      this.profile.proteinratiom = 2.2;
+    }
     this.profile.tef = this.profile.bmr / 10;
     this.profile.weightcaltotal = this.profile.weightcal * this.profile.weightmin;
     this.profile.cardiocaltotal = this.profile.cardiocal * this.profile.cardiomin;
     this.profile.tdee = ( this.profile.bmr + this.profile.tef ) * this.profile.actmod;
     this.profile.calgoalbase = Math.round ( this.profile.tdee * this.profile.goalmod * 100 ) / 100;
     this.profile.calgoalex = Math.round( ( this.profile.tdee + this.profile.weightcaltotal + this.profile.cardiocaltotal ) * this.profile.goalmod * 100 ) / 100;
-    if ( this.profile.goalmod < 1 ) {
-      this.profile.proteinratio = .69;
+    if ( this.profile.goalmod <= 1 ) {
+      this.profile.proteinratio = .69 * this.profile.proteinratiom;
     }
     if ( this.profile.goalmod == 1.05 ) {
-      this.profile.proteinratio = .8;
+      this.profile.proteinratio = .8 * this.profile.proteinratiom;
     }
     if ( this.profile.goalmod == 1.1 ) {
-      this.profile.proteinratio = .81;
+      this.profile.proteinratio = .81 * this.profile.proteinratiom;
     }
     if ( this.profile.goalmod == 1.15 ) {
-      this.profile.proteinratio = .82;
+      this.profile.proteinratio = .82 * this.profile.proteinratiom;
     }
     this.profile.proteingram = Math.round( this.profile.weight * this.profile.proteinratio * 100 ) / 100;
     this.profile.proteincaltotal = this.profile.proteingram * this.profile.proteincal;

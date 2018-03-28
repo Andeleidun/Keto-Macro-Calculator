@@ -21,6 +21,15 @@
               </ion-card>
               <ion-card>
                   <ion-row>
+                      <ion-item>
+                        <ion-label fixed>Units</ion-label>
+                         <ion-select [(ngModel)]="profile.units">
+                           <ion-option value="american">American</ion-option>
+                          <ion-option value="metric">Metric</ion-option>
+                        </ion-select>
+                       </ion-item>
+                    </ion-row>
+                  <ion-row>
                       <ion-item col-6 class="marginBottom">
                         <ion-label floating>Weight</ion-label>
                         <ion-input type="number" [(ngModel)]="profile.weight" step="0.01"></ion-input>
@@ -110,16 +119,20 @@
             <ion-slide>
                 <h1>What Is Your Goal?</h1>
                 <ion-card>
-                      <ion-row radio-group [(ngModel)]="profile.goaltype">                      
-                          <ion-item col-6>
-                            <ion-label>Weight Loss</ion-label>
-                            <ion-radio value="weightloss"></ion-radio>
+                      <ion-list radio-group [(ngModel)]="profile.goaltype">
+                          <ion-item>
+                              <ion-label>Weight Loss</ion-label>
+                              <ion-radio value="weightloss"></ion-radio>
                           </ion-item>
-                          <ion-item col-6>
-                            <ion-label>Muscle Gain</ion-label>
-                            <ion-radio value="musclegain"></ion-radio>
-                          </ion-item>
-                      </ion-row>
+                            <ion-item>
+                              <ion-label>Maintenance</ion-label>
+                              <ion-radio value="maintenance"></ion-radio>
+                            </ion-item>
+                            <ion-item>
+                              <ion-label>Muscle Gain</ion-label>
+                              <ion-radio value="musclegain"></ion-radio>
+                            </ion-item>
+                        </ion-list>
                 </ion-card>
                 <ion-card [ngClass]="{'hide' : profile.goaltype != 'weightloss'}">
                     <ion-item>

@@ -2,13 +2,18 @@ import { ProfileBase } from './profile';
 
 export const profileData: ProfileBase[] = [
     {
+    units: "american",
     weight : 0,
+    weightfinal : 0,
     heightfeet : 0,
     heightinches : 0,
     height : 0,
     abdomen : 0,
+    abdomenfinal : 0,
     waist : 0,
+    waistfinal : 0,
     neck : 0,
+    neckfinal : 0,
     gender : 'male',
     
     mencirc : 0,
@@ -42,6 +47,7 @@ export const profileData: ProfileBase[] = [
     carbgram: 25,
     fatgram: 0,
     proteinratio: 1,
+    proteinratiom: 1,
 
     bmr: 0,
     tef: 0,
