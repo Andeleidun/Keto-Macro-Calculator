@@ -15,18 +15,16 @@ export const profileData: ProfileBase[] = [
     neck : 0,
     neckfinal : 0,
     gender : 'male',
+
+    fatperbase : 0,
+    fatmod1 : 0,
+    fatmod2 : 0,
     
     mencirc : 0,
     menheight : 0,
-    menfatper : 0,
-    menfatmass : 0,
-    menleanmass : 0,
     
     womencirc : 0,
     womenheight : 0,
-    womenfatper : 0,
-    womenfatmass : 0,
-    womenleanmass : 0,
 
     finalfatper: 0,
     finalfatmass: 0,

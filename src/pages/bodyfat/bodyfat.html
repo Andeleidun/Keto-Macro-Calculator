@@ -78,15 +78,10 @@
       </ion-row>
       <ion-row>
           <ion-item class="centerAlign">
-              <button ion-button (click)="calculateMale()" [ngClass]="{'hide' : profile.gender == 'female'}" class="bodyfatButton">
+              <button ion-button (click)="calculateFat()" class="bodyfatButton">
                   Calculate
-                </button>
-            </ion-item>
-            <ion-item class="centerAlign">
-                <button ion-button (click)="calculateFemale()" [ngClass]="{'hide' : profile.gender == 'male'}" class="bodyfatButton">
-                    Calculate
-                </button>
-              </ion-item>
+              </button>
+          </ion-item>
       </ion-row>
       <hr/>
       <ion-row>
