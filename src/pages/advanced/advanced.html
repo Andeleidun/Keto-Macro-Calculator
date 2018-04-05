@@ -1,0 +1,172 @@
+<ion-header class="ionHeading">
+  <ion-navbar>
+    <ion-title padding class="title">Keto Mate</ion-title>
+    <ion-title class="title">Advanced Macro Calculator</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content text-wrap id="advancedpage">
+  <ion-card>
+    <ion-card-content>
+        <ion-row>
+            <ion-item>
+              <ion-label fixed>Units</ion-label>
+               <ion-select [(ngModel)]="profile.units">
+                 <ion-option value="american">American</ion-option>
+                <ion-option value="metric">Metric</ion-option>
+              </ion-select>
+             </ion-item>
+          </ion-row>
+          <ion-row>
+              <ion-item col-12>
+                <p>
+                  This calculator allows you to tweak exact values for your diet. For more information on each value, click the information button above calculate.
+                </p>
+              </ion-item>
+          </ion-row>
+          <ion-row class="marginBottom">
+            <ion-item col-6>
+                <ion-label floating>Weight</ion-label>
+                <ion-input type="number" [(ngModel)]="profile.weight"></ion-input>
+              </ion-item>
+              <ion-item col-6>
+                <ion-label floating>Body Fat %</ion-label>
+                <ion-input type="number" [(ngModel)]="profile.finalfatper"></ion-input>
+              </ion-item>
+            </ion-row>
+          <ion-list>
+            <ion-item>
+              <ion-label floating>Activity Level</ion-label>
+              <ion-input type="number" [(ngModel)]="profile.actmod"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <p>Please enter an activity level. General activity levels range from 1 (Sedentary) to 1.5 (Highly Active).</p>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Goal Modifier</ion-label>
+                <ion-input type="number" [(ngModel)]="profile.goalmod"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <p>Please enter a calorie goal modifier. Recommended levels from .75 (aggressive weightloss) to 1.15 (aggressive muscle gain).</p>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>TDEE</ion-label>
+                <ion-input type="number" [(ngModel)]="profile.tdee"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <p>TDEE- Total Daily Energy Expenditure. If a doctor has calculated your TDEE, enter it here. If not, leave it at zero and we will calculate it for you.</p>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Protein Ratio</ion-label>
+                <ion-input type="number" [(ngModel)]="profile.proteinratio"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <p>Please enter a protein ratio. Recommended levels from .69 (prevent muscle loss) to .82 (aggressive muscle gain).</p>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Protein - %</ion-label>
+                <ion-input type="number" [(ngModel)]="profile.proteinper"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <p>You can also define your dietary needs by macro percentages. If you enter a number here, it will override protein ratio.</p>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Carbs - %</ion-label>
+                <ion-input type="number" [(ngModel)]="profile.carbper"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <p>Enter here if you know what % of your diet you want as carbs. If not, leave it at zero and we will calculate it for you.</p>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Fat - %</ion-label>
+                <ion-input type="number" [(ngModel)]="profile.fatper"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <p>Enter here if you know what % of your diet you want as fat. If not, leave it at zero and we will calculate it for you.</p>
+              </ion-item>
+          </ion-list>
+          <ion-row>
+              <button ion-button icon-only block class="centerAlign" (click)="showAdvancedInfo()">
+                  <ion-icon name="information-circle"></ion-icon>
+              </button>
+          </ion-row>
+          <ion-row [ngClass]="{'hide' : this.advancedInfo != 'show'}">
+            <ion-item>
+                  For activity levels: 
+                    <ul>
+                      <li>A sedentary lifestyle is typical of an office worker who gets no outside exercise.</li>
+                      <li>A restaurant employee would have a lightly active lifestyle. 1-3 hours per week of exercise.</li>
+                      <li>An avid hiker would have a moderately active lifestyle. 3-5 hours per week of exercise.</li>
+                      <li>Manual laborers and those that exercise heavily every day have a highly active lifestyle.</li>
+                    </ul>
+            </ion-item>
+          </ion-row>
+          <ion-row [ngClass]="{'hide' : this.advancedInfo != 'show'}">
+            <ion-item>
+                  For goal levels: 
+                    <ul>
+                      <li>Make sure that if you set for muscle gain, you are exercising appropriately.</li>
+                      <li>If you are after muscle gain, you will have to set a higher protein ratio as well.</li>
+                      <li>Set goal level to 1 for maintenance.</li>
+                    </ul>
+            </ion-item>
+        </ion-row>
+        <ion-row [ngClass]="{'hide' : this.advancedInfo != 'show'}">
+          <ion-item>
+                  For TDEE: 
+                    <ul>
+                      <li>TDEE stands for Total Daily Energy Expenditure.</li>
+                      <li>For most people, the calculated TDEE will be quite sufficient.</li>
+                      <li>If a medical professional has determined your TDEE, always defer to their value.</li>
+                    </ul>
+          </ion-item>
+        </ion-row>
+        <ion-row [ngClass]="{'hide' : this.advancedInfo != 'show'}">
+          <ion-item>
+                  For Protein Ratio: 
+                    <ul>
+                      <li>.69-.72 is ideal for maintaing muscle while losing weight.</li>
+                      <li>For maintaining weight, use a value from .7-.75.</li>
+                      <li>For optimum muscle gain, use a value from .79-.82.</li>
+                    </ul>
+          </ion-item>
+        </ion-row>
+        <ion-row [ngClass]="{'hide' : this.advancedInfo != 'show'}">
+            <ion-item>
+                    For Macro %: 
+                      <ul>
+                        <li>This is an advanced feature for those that already know their optimum percentages.</li>
+                        <li>Carbs shouldn't be set at above 5%, unless your calorie goal is really low.</li>
+                      </ul>
+            </ion-item>
+        </ion-row>
+        <ion-row>
+            <ion-item class="centerAlign">
+              <button ion-button (click)="calculate()" class="calcButton">
+                  Calculate
+              </button>
+            </ion-item>
+        </ion-row>
+        <ion-row>
+            <ion-item col-6>
+                <ion-label floating>Protein - Grams</ion-label>
+                <ion-input type="number" [(ngModel)]="profile.proteingram"></ion-input>
+              </ion-item>
+              <ion-item col-6>
+                <ion-label floating>Fat - Grams</ion-label>
+                <ion-input type="number" [(ngModel)]="profile.fatgram"></ion-input>
+              </ion-item>
+          </ion-row>
+          <ion-row>
+              <ion-item col-6>
+                  <ion-label floating>Carbs - Grams</ion-label>
+                  <ion-input type="number" [(ngModel)]="profile.carbgram"></ion-input>
+                </ion-item>
+                <ion-item col-6>
+                  <ion-label floating>Calories - Goal</ion-label>
+                  <ion-input type="number" [(ngModel)]="profile.calgoalbase"></ion-input>
+                </ion-item>
+            </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

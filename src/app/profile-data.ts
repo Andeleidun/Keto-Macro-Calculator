@@ -46,8 +46,9 @@ export const profileData: ProfileBase[] = [
     proteingram: 0,
     carbgram: 25,
     fatgram: 0,
-    proteinratio: 1,
+    proteinratio: 0.69,
     proteinratiom: 1,
+    proteinratiofinal: 0,
 
     bmr: 0,
     tef: 0,
@@ -70,5 +71,12 @@ export const profileData: ProfileBase[] = [
     fatgramex: 0,
     fatper: 0,
     fatperex: 0,
+
+    proteinratiotemp: 0,
+    tdeetemp: 0,
+    proteinpertemp: 0,
+    carbpertemp: 0,
+    fatpertemp: 0,
+    initialcalc: 0,
 }
 ]

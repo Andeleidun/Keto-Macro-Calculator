@@ -9,7 +9,8 @@ import {IonicPage } from 'ionic-angular';
 export class TabsPage {
 
   tab1Root = 'MacroPage';
-  tab2Root = 'BodyFatPage';
+  tab2Root = 'AdvancedPage';
+  tab3Root = 'BodyFatPage';
 
   constructor() {
 

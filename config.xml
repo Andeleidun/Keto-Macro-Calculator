@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ketomatecalculator.app" version="0.1.0">
+<widget id="com.ketomatecalculator.app" version="0.2.5">
     <name>Keto Macro Calculator</name>
     <description>User friendly macro nutrient calculator for the ketogenic diet.</description>
     <author email="adairdaniels@gmail.com">Adair Daniels</author>

@@ -42,6 +42,7 @@ export class ProfileBase {
         public fatgram: number,
         public proteinratio: number,
         public proteinratiom: number,
+        public proteinratiofinal: number,
         public bmr: number,
         public tef: number,
         public tdee: number,
@@ -59,5 +60,11 @@ export class ProfileBase {
         public fatcalextotal: number,
         public fatgramex: number,
         public fatper: number,
-        public fatperex: number, ) {}
+        public fatperex: number,
+        public proteinratiotemp: number,
+        public tdeetemp: number,
+        public proteinpertemp: number,
+        public carbpertemp: number,
+        public fatpertemp,
+        public initialcalc, ) {}
 }
