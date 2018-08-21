@@ -1,8 +1,8 @@
 {
   "name": "KetoMacroCalculator",
-  "app_id": "ba61eb3e",
-  "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "type": "ionic-angular",
+  "pro_id": "ba61eb3e"
 }

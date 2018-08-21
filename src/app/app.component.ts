@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { NavController } from 'ionic-angular';
 
 
 @Component({
@@ -9,6 +10,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 })
 export class MyApp {
   rootPage:any = 'TabsPage';
+  @ViewChild('menucontent') nav: NavController;
+
+  openPage(page) {
+    this.nav.push(page);
+  }
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -18,4 +24,5 @@ export class MyApp {
       splashScreen.hide();
     });
   }
+
 }

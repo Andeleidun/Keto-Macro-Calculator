@@ -57,6 +57,14 @@ $secondary-light: #aafff6;
     margin-bottom: 10px;
 }
 
+.bar-button-menutoggle-md ion-icon {
+    color:white;
+}
+
+.back-button.show-back-button {
+    display: none;
+}
+
 .tabs-md .tab-button {
     background-color: $secondary-dark;
     color: $primary-light;
