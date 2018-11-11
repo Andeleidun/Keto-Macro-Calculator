@@ -1,11 +1,24 @@
 <ion-menu [content]="menucontent" [persistent]="true">
     <ion-content>
+      <ion-card id="menutop">
+        Keto Mate
+      </ion-card>
       <ion-list>
-        <button ion-item (click)="openPage('TabsPage')">
-          Home
+        <button ion-item menuClose *ngFor="let p of pages" (click)="openTab(p)">
+          <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+          {{ p.title }}
         </button>
-        <button ion-item (click)="openPage('KetoFAQPage')">
+        <button ion-item menuClose (click)="openPage('KetoFAQPage')">
+          <ion-icon item-start name="help"></ion-icon>
           Keto FAQ
+        </button>
+        <button ion-item menuClose (click)="openPage('KetoIntroPage')">
+          <ion-icon item-start name="book"></ion-icon>
+          Intro to Keto
+        </button>
+        <button ion-item menuClose (click)="openPage('ProPage')">
+            <ion-icon item-start name="contact"></ion-icon>
+            Profile
         </button>
       </ion-list>
     </ion-content>

@@ -9,8 +9,276 @@
   </ion-header>
   
   <ion-content text-wrap id="ketofaqpage">
-    <ion-card>
-        
-    </ion-card>
-  </ion-content>
-  
+    <ion-card class="shadowless">
+    <ion-slides>
+      <ion-slide>
+        <h1>The Basics</h1>
+        <ion-card>
+            <ion-row>
+                <ion-item col-12>
+                  <p>
+                      <strong>What is the keto diet?</strong>
+                      <br/>
+                      The keto diet is a specific low carb diet, one that calls for ~30 grams or less of net carbohydrates. 
+                      <br/>
+                      <br/>
+                      <strong>What do I eat?</strong>
+                      <br/>
+                      Meat, vegetables, full fat dairy, fish, and other sources of fat like oils.
+                      <br/>
+                      <br/>
+                      <strong>What do I not eat?</strong>
+                      <br/>
+                      Sweets, bread, rice, pasta, and potatoes all go out the door.
+                      <br/>
+                      <br/>
+                      <strong>How do I keep track?</strong>
+                      <br/>
+                      Right now, our recommendation is to use a tool like MyFitnessPal. Trackers are invaluable when starting a low carb diet.
+                  </p>
+                </ion-item>
+            </ion-row>
+        </ion-card>
+        <ion-row>
+            <ion-item col-6>
+            </ion-item>
+            <ion-item col-6 class="rightAlign">
+              <button ion-button (click)="nextSlide()" class="slideButton">
+                Next
+              </button>
+            </ion-item>
+          </ion-row>
+      </ion-slide>
+      <ion-slide>
+          <h1>Carbohydrates</h1>
+          <ion-card>
+              <ion-row>
+                  <ion-item col-12>
+                    <p>
+                        <strong>Wait, what are net carbs?</strong>
+                        <br/>
+                        Fiber, while a carbohydrate, does not impact a low carb diet. Net carbs are calculated as total carbs - fiber.
+                        <br/>
+                        <br/>
+                        <strong>What about artificial sweeteners?</strong>
+                        <br/>
+                        Artificial sweeteners like aspartame and natural sweeteners like stevia that don't have a caloric content or a glycemic index are safe for a ketogenic diet.
+                        <br/>
+                        <br/>
+                        <strong>...and sugar alcohols?</strong>
+                        <br/>
+                        Sugar alcohols are a type of sweetener that are commonly used as an alternative to zero calorie sweeteners. As long as it's one with a low glycemic index, rule of thumb is to count 1 gram of carbs for every 2 grams ingested.
+                        <br/>
+                        <br/>
+                        <strong>Can I cheat?</strong>
+                        <br/>
+                        Simple answer? Yes.<br/>Long answer? Do it sparingly/strategically. Cheating can help reduce diet fatigue and even get over a plateau. However, that doesn't mean you should do it all the time.
+                    </p>
+                  </ion-item>
+              </ion-row>
+          </ion-card>
+          <ion-row>
+              <ion-item col-6>
+                <button ion-button (click)="prevSlide()" class="slideButton">
+                  Previous
+                </button>
+              </ion-item>
+              <ion-item col-6 class="rightAlign">
+                <button ion-button (click)="nextSlide()" class="slideButton">
+                   Next
+                </button>
+              </ion-item>
+            </ion-row>
+        </ion-slide>
+      <ion-slide>
+          <h1>Keto Adaptation</h1>
+          <ion-card>
+              <ion-row>
+                  <ion-item col-12>
+                    <p>
+                        <strong>How long does it take to be "keto adapted"?</strong>
+                        <br/>
+                        The keto adaptation process begins after one day, really kicks in after three, and is fully underway after three weeks.
+                        <br/>
+                        <br/>
+                        <strong>What is keto flu?</strong>
+                        <br/>
+                        A small period of flu-like symptoms that can happen in the early stages of keto adaptation. If you feel this way, increase your electrolyte intake.
+                        <br/>
+                        <br/>
+                        <strong>How do I know I'm in "ketosis"?</strong>
+                        <br/>
+                        Possible outward signs include acetone breath and increased thirst. However, all you need to know is your carbohydrate intake. If you haven't been eating more than 30 grams of carbs per day, you're in ketosis.
+                        <br/>
+                        <br/>
+                        <strong>Do I need to test to see if I'm producing ketones?</strong>
+                        <br/>
+                        No. If you're eating less than 30 grams of carbs, but have the energy to get through the day, that energy is coming from ketones.
+                        <br/>
+                        <br/>
+                        <strong>Should I be peeing this much?</strong>
+                        <br/>
+                        Probably. One of the noted effects of being in a ketogenic state is low water retention, so more of the water you drink will pass through you. Now, if you're taking a minute and a half to pee, you might want to see a doctor about that.
+                    </p>
+                  </ion-item>
+              </ion-row>
+          </ion-card>
+          <ion-row>
+              <ion-item col-6>
+                <button ion-button (click)="prevSlide()" class="slideButton">
+                  Previous
+                </button>
+              </ion-item>
+              <ion-item col-6 class="rightAlign">
+                <button ion-button (click)="nextSlide()" class="slideButton">
+                   Next
+                </button>
+              </ion-item>
+            </ion-row>
+        </ion-slide>
+      <ion-slide>
+        <h1>Supplements</h1>
+        <ion-card>
+            <ion-row>
+                <ion-item col-12>
+                  <p>
+                      <strong>What kind of supplements are necessary?</strong>
+                      <br/>
+                      Simply, none. General supplements like BCAAs can help especially if you're exercising regularly, and protein powder can help if you're trying to build muscle, but no supplements are necessary.
+                      <br/>
+                      <br/>
+                      <strong>What about ketone supplements?</strong>
+                      <br/>
+                      At this point, all data points to ketone supplements being nothing more than snake oil. If you're already in a ketogenic state, your body will already be producing sufficient ketones. If it's not, your body will ignore the ketones for carbohydrates.
+                      <br/>
+                      <br/>
+                      <strong>Will carb blockers let me eat more carbs?</strong>
+                      <br/>
+                      No. Carb blockers are also snake oil. Don't try to fudge your way around the carb requirements, the diet is either for you or it isn't.
+                      <br/>
+                      <br/>
+                      <strong>Is there anything that CAN help?</strong>
+                      <br/>
+                      While not a supplement, intermittent fasting has some synergistic effects with a ketogenic diet. Everything from a 16/8 split to one meal a day has been demonstrated to be effectively combined with a ketogenic diet.
+                  </p>
+                </ion-item>
+            </ion-row>
+        </ion-card>
+        <ion-row>
+            <ion-item col-6>
+              <button ion-button (click)="prevSlide()" class="slideButton">
+                Previous
+              </button>
+            </ion-item>
+            <ion-item col-6 class="rightAlign">
+              <button ion-button (click)="nextSlide()" class="slideButton">
+                 Next
+              </button>
+            </ion-item>
+          </ion-row>
+      </ion-slide>
+      <ion-slide>
+          <h1>Keto Lifestyle</h1>
+          <ion-card>
+              <ion-row>
+                  <ion-item col-12>
+                    <p>
+                        <strong>What will my weightloss look like?</strong>
+                        <br/>
+                        At first, you'll have a quick burst of weight dropped as your body flushes excess water. For the next couple weeks, it'll slow down or even plateau. Once your body reaches full keto adaptation, weightloss should start trending downward again. Remember, weightloss is an overall trend, and your weight may fluctuate up and down on a day by day basis.
+                        <br/>
+                        <br/>
+                        <strong>You've talked about electrolytes a few times now, how can I get enough?</strong>
+                        <br/>
+                        Broth is a great starting point, followed by meat, cheese, spinach, fish, mushrooms, and avacado.
+                        <br/>
+                        <br/>
+                        <strong>How easy is it to eat out?</strong>
+                        <br/>
+                        It'll be daunting at first, but once you grow more accustomed to the diet, you'll know what you can have and not have. Easy things to do are substitutions (fries for veggies, buns for lettuce wraps). Try to remember what relies more upon fat for flavor - for example, creamy/cheesy sauces are generally fatty.
+                        <br/>
+                        <br/>
+                        <strong>Do I have to cook all the time?</strong>
+                        <br/>
+                        Short answer? Yes.<br/>Long answer? There are prepackaged foods that can fit the keto diet like pork rinds, but don't rely on them. Keto can be quite a journey in flavor discovery, and cooking is always a good skill to have up your sleeve.
+                        <br/>
+                        <br/>
+                        <strong>Will I lose my alochol tolerance?</strong>
+                        <br/>
+                        There's no easy way to break this news, but yes. Even if you're a 6'4, 250lb lad of Irish descent, when you're on the keto diet, you're a cheap date.
+                        <br/>
+                        <br/>
+                        <strong>Can I exercise on the keto diet?</strong>
+                        <br/>
+                        Absolutely, and we do recommend that you do so. While weightloss is done first and foremost in the kitchen, diet and exercise together is almost always superior to diet alone.
+                    </p>
+                  </ion-item>
+              </ion-row>
+          </ion-card>
+          <ion-row>
+              <ion-item col-6>
+                <button ion-button (click)="prevSlide()" class="slideButton">
+                  Previous
+                </button>
+              </ion-item>
+              <ion-item col-6 class="rightAlign">
+                <button ion-button (click)="nextSlide()" class="slideButton">
+                   Next
+                </button>
+              </ion-item>
+            </ion-row>
+        </ion-slide>
+        <ion-slide>
+            <h1>Keto Myths</h1>
+            <ion-card>
+                <ion-row>
+                    <ion-item col-12>
+                      <p>
+                          <strong>Will too much protein drop me out of ketosis?</strong>
+                          <br/>
+                          This is a very prevalent myth - but the truth is that you would really have to over do it to break ketosis due to protein glycogensis. Body builders will sometimes eat up to 1.2 grams of protein per pound of lean mass, you'd have to almost double that to kill ketosis.
+                          <br/>
+                          <br/>
+                          <strong>Will too much fat make me diabetic?</strong>
+                          <br/>
+                          No. Diabetes is an insulin-response disorder, and insulin is what your body uses to regulate your blood sugar. In fact, there are ongoing studies which indicate a positive effect of a ketogenic diet for type-2 diabetics. If you're curious, talk to your doctor.
+                          <br/>
+                          <br/>
+                          <strong>Is there any reason I shouldn't immediately jump into a ketogenic diet?</strong>
+                          <br/>
+                          Yes. If you are diabetic, especially if you're taking medication for it, talk to your doctor first. If the keto diet starts regulating your blood sugar and you're injecting insulin, it can push you into hypoglycemia. Also talk to your doctor if you're on medication for high blood pressure. Breastfeeding mothers should also wait until after a child is weened.
+                          <br/>
+                          <br/>
+                          <strong>What about heart disease?</strong>
+                          <br/>
+                          The primary risk factor for heart disease is low-density lipoprotein particle count, which for the majority of the population has been demonstrated IS NOT correlated with dietary cholesterol intake. Stronger factors in LDL count are inactivity and obesity - so let's lose that weight!
+                          <br/>
+                          <br/>
+                          <strong>How can I avoid my body going into "starvation mode"?</strong>
+                          <br/>
+                          This is a very convoluted myth. What you need to know is that if you're not fasting for the day, calories should remain at or above 1200/day or you will see a metabolic rate drop. Otherwise, you'll be fine.
+                          <br/>
+                          <br/>
+                          <strong>Do I need to "carb cycle"?</strong>
+                          <br/>
+                          For 99% of readers, no. Two alternative ketogenic diets that include elevated carbohydrates in a strategic manner do exist, the Targeted Ketogenic Diet and the Cyclical Ketogenic Diet. These are advanced diets for those experienced AND doing heavy amounts of exercise. This guide is not a resource for those versions.
+                      </p>
+                    </ion-item>
+                </ion-row>
+            </ion-card>
+            <ion-row>
+                  <ion-item col-6>
+                    <button ion-button (click)="prevSlide()" class="slideButton">
+                      Previous
+                    </button>
+                  </ion-item>
+                  <ion-item col-6 class="rightAlign">
+                    <button ion-button (click)="restart()" class="slideButton">
+                       Beginning
+                    </button>
+                  </ion-item>
+                </ion-row>
+            </ion-slide>
+    </ion-slides>
+  </ion-card>
+</ion-content>

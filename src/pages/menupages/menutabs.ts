@@ -4,17 +4,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  templateUrl: 'tabs.html'
+  templateUrl: 'menutabs.html'
 })
-export class TabsPage {
+export class MenuTabsPage {
 
-  tab1Root: any = 'MacroPage';
-  tab2Root: any = 'AdvancedPage';
-  tab3Root: any = 'BodyFatPage';
-  myIndex: number;
+  menuTab1Root: any = 'KetoFAQPage';
+  menuTab2Root: any = 'KetoIntroPage';
+  menuIndex: number;
 
   constructor(navParams: NavParams) {
     // Set the active tab based on the passed index from menu.ts
-    this.myIndex = navParams.data.tabIndex || 0;
+    this.menuIndex = navParams.data.tabIndex || 0;
   }
 }

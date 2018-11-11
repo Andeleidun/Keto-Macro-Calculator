@@ -54,7 +54,7 @@ export class AdvancedPage implements OnInit {
     this.profile.calgoalbase = Math.round ( this.profile.tdee * this.profile.goalmod * 100 ) / 100;
     this.profile.calgoalex = Math.round( ( this.profile.tdee + this.profile.weightcaltotal + this.profile.cardiocaltotal ) * this.profile.goalmod * 100 ) / 100;
     this.profile.proteinratiofinal = this.profile.proteinratio * this.profile.proteinratiom;
-    this.profile.proteingram = Math.round( this.profile.weight * this.profile.proteinratio * 100 ) / 100;
+    this.profile.proteingram = Math.round( this.profile.weight * this.profile.proteinratiofinal * 100 ) / 100;
     this.profile.proteincaltotal = this.profile.proteingram * this.profile.proteincal;
     if ( this.profile.proteinper == 0 || ( this.profile.proteinper != this.profile.proteinpertemp && this.profile.initialcalc == 0 ) ) { 
       this.profile.proteinper = Math.round( ( this.profile.proteincaltotal / this.profile.calgoalbase ) * 10000 ) / 100;

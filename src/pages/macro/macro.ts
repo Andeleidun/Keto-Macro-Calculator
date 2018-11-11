@@ -100,7 +100,7 @@ export class MacroPage implements OnInit {
     if ( this.profile.goalmod == 1.15 ) {
       this.profile.proteinratiofinal = .82 * this.profile.proteinratiom;
     }
-    this.profile.proteingram = Math.round( this.profile.weight * this.profile.proteinratio * 100 ) / 100;
+    this.profile.proteingram = Math.round( this.profile.weight * this.profile.proteinratiofinal * 100 ) / 100;
     this.profile.proteincaltotal = this.profile.proteingram * this.profile.proteincal;
     this.profile.proteinper = Math.round( ( this.profile.proteincaltotal / this.profile.calgoalbase ) * 10000 ) / 100;
     this.profile.proteinperex = Math.round( ( this.profile.proteincaltotal / this.profile.calgoalex ) * 10000 ) / 100;

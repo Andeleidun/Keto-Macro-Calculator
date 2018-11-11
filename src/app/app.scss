@@ -22,9 +22,20 @@ $secondary-dark: #00a238;
 $secondary-main: #00e676;
 $secondary-light: #aafff6;
 
+#menutop {
+    background-color: $primary-dark;
+    color: white;
+    margin: 0;
+    width: 100%;
+    padding: 20px;
+    font-size: 2.0rem;
+    text-align: center;
+}
+
 .shadowless {
     box-shadow: none;
     -webkit-box-shadow: none;
+    margin: 10px auto;
 }
 
 .hide {
@@ -55,6 +66,20 @@ $secondary-light: #aafff6;
 
 .marginBottom {
     margin-bottom: 10px;
+}
+
+.swiper-slide-active .card-md {
+    margin: 10px auto;
+    width: 100%;
+}
+
+#advancedpage .card-md, #bodyfatpage .card-md {
+    margin: 10px auto;
+    width: 100%;
+}
+
+.bar-button-menutoggle-md {
+    position: fixed;
 }
 
 .bar-button-menutoggle-md ion-icon {
@@ -124,6 +149,11 @@ $secondary-light: #aafff6;
     padding: 30px;
 }
 
+.item-md .proButton {
+    font-size: 1.5rem;
+    padding: 25px;
+}
+
 .item-md .restartButton {
     font-size: 1.4rem;
     padding: 25px;
@@ -134,10 +164,72 @@ $secondary-light: #aafff6;
     padding: 25px;
 }
 
+.item-md .refreshButton {
+    font-size: 1.6rem;
+    padding: 20px;
+}
+
 .toolbar-background-md {
     background: $primary-dark;
 }
 
 p {
     text-align: center;
+}
+
+#ketointropage h2 {
+    font-weight: bold;
+}
+
+#ketointropage p, #ketofaqpage p {
+    text-align: left;
+    line-height: 1.2;
+}
+
+#ketointropage br {
+    line-height: 1.8;
+}
+
+#ketopropage h1 {
+    text-align: center;
+    line-height: 1.8;
+}
+
+#ketopropage p {
+    text-align: left;
+    line-height: 1.4;
+}
+
+#ketopropage ul {
+    padding-inline-start: 25px;
+}
+
+#ketopropage li {
+    text-align: left;
+    line-height: 1.4;
+}
+
+#ketopropage ion-card {
+    margin: 10px auto;
+    padding: 0;
+    width: 100%;
+}
+
+#ketopropage ion-slides {
+    margin: 2px auto;
+    width: 100%;
+}
+
+#ketopropage ion-slides h2 {
+    margin: 0 auto; 
+}
+
+#ketopropage .dataContainer {
+    padding: 5px 5px;
+    width: 100%;
+}
+
+#ketopropage #goPro {
+    width: 85%;
+    margin: 5px auto;
 }

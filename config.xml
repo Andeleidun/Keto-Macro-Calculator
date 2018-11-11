@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ketomatecalculator.app" version="0.2.7">
+<widget id="com.ketomatecalculator.app" version="0.4.3">
     <name>Keto Macro Calculator</name>
     <description>User friendly macro nutrient calculator for the ketogenic diet.</description>
     <author email="adairdaniels@gmail.com">Adair Daniels</author>
@@ -82,5 +82,6 @@
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
-    <engine name="android" spec="~7.0.0" />
+    <plugin name="cordova-plugin-market" spec="^1.2.0" />
+    <engine name="android" spec="^7.1.1" />
 </widget>

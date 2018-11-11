@@ -1,0 +1,186 @@
+<ion-header class="ionHeading">
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title padding class="title">Keto Mate</ion-title>
+      <ion-title class="title">Macro Calculator Pro</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content text-wrap id="ketopropage">
+      <ion-card class="shadowless" *ngIf="showProfilePage" (click)="hideProfilePage()" id="profilePlaceholder">
+        <ion-card class="shadowless">
+            <h1 class="centerAlign">
+                Profile Data
+            </h1>
+            <ion-card class="shadowless">
+                <ion-card class="dataContainer">
+                    <ion-row>
+                        <ion-item col-6>
+                            <ion-label stacked>Weight - Initial</ion-label>
+                            <ion-input type="number" readonly [(ngModel)]="profile.weight"></ion-input>
+                        </ion-item>
+                        <ion-item col-6>
+                            <ion-label stacked>Bodyfat % - Initial</ion-label>
+                            <ion-input type="number"  readonly [(ngModel)]="profile.finalfatper"></ion-input>
+                        </ion-item>
+                    </ion-row>
+                    <ion-row>
+                        <ion-item col-6>
+                            <ion-label stacked>Weight - Current</ion-label>
+                            <ion-input type="number" readonly [(ngModel)]="profile.weight"></ion-input>
+                        </ion-item>
+                        <ion-item col-6>
+                            <ion-label stacked>Bodyfat % - Current</ion-label>
+                            <ion-input type="number" readonly [(ngModel)]="profile.finalfatper"></ion-input>
+                        </ion-item>
+                    </ion-row>
+                    <ion-row>
+                            <ion-item col-6>
+                                <ion-label stacked>Weight - Difference</ion-label>
+                                <ion-input type="number" readonly [(ngModel)]="weightdiff"></ion-input>
+                            </ion-item>
+                            <ion-item col-6>
+                                <ion-label stacked>Bodyfat % - Difference</ion-label>
+                                <ion-input type="number" readonly [(ngModel)]="fatperdiff"></ion-input>
+                            </ion-item>
+                    </ion-row>
+                </ion-card>
+            </ion-card>
+        </ion-card>
+        <ion-card class="shadowless">
+            <ion-row>
+                <ion-item col-6 *ngIf="!editMode">
+                    <button ion-button class="slideButton">
+                        Save
+                    </button>
+                </ion-item>
+                <ion-item col-6 class="rightAlign">
+                    <button ion-button class="slideButton">
+                        Edit
+                    </button>
+                </ion-item>
+            </ion-row>
+        </ion-card>
+        <ion-card class="shadowless">
+            <h1 class="centerAlign">
+                Weekly Data
+            </h1>
+            <ion-card class="shadowless">
+                <ion-slides>
+                    <ion-slide>
+                        <ion-card class="dataContainer">
+                            <ion-row class="centerAlign">
+                                <h2>Sunday</h2>
+                            </ion-row>
+                            <ion-row>
+                                <ion-item col-6>
+                                        <ion-label floating>Protein - Grams</ion-label>
+                                        <ion-input type="number" readonly [(ngModel)]="profile.proteingram"></ion-input>
+                                    </ion-item>
+                                <ion-item col-6>
+                                    <ion-label floating>Fat - Grams</ion-label>
+                                    <ion-input type="number" readonly [(ngModel)]="profile.fatgram"></ion-input>
+                                </ion-item>
+                            </ion-row>
+                            <ion-row>
+                                    <ion-item col-6>
+                                        <ion-label floating>Carbs - Grams</ion-label>
+                                        <ion-input type="number" readonly [(ngModel)]="profile.carbgram"></ion-input>
+                                    </ion-item>
+                                    <ion-item col-6>
+                                        <ion-label floating>Calories - Goal</ion-label>
+                                        <ion-input type="number" readonly [(ngModel)]="profile.calgoalbase"></ion-input>
+                                    </ion-item>
+                            </ion-row>
+                        </ion-card>
+                        <ion-row>
+                            <ion-item col-6>
+                                <button ion-button class="slideButton">
+                                    Previous
+                                </button>
+                            </ion-item>
+                            <ion-item col-6 class="rightAlign">
+                                <button ion-button class="slideButton">
+                                    Next
+                                </button>
+                            </ion-item>
+                        </ion-row>
+                    </ion-slide>
+                </ion-slides>
+            </ion-card>
+        </ion-card>
+        <ion-card class="shadowless">
+            <ion-item col-12>
+                    <button ion-button class="refreshButton" block>
+                        Refresh
+                    </button>
+            </ion-item>
+        </ion-card>
+        <ion-card class="shadowless">
+            <h1 class="centerAlign">Data Reset</h1>
+            <ion-row>
+                <ion-item col-6 class="centerAlign">
+                    <button ion-button class="slideButton">
+                        Reset Data
+                    </button>
+                </ion-item>
+            </ion-row>
+        </ion-card>
+    </ion-card>
+    <ion-card class="shadowless" *ngIf="!showProfilePage" id="goPro">
+        <h1>Go Pro!</h1>
+        <p>
+            Access the profile page and more by going pro!
+            <br/>
+            <br/>
+            The next step in our quest to develop and deliver the ultimate Keto diet companion, the Keto Mate Macro Calculator Pro is now available! 
+            <br/>
+            <br/>
+            Help support the development of the Keto Mate Diet Companion, and receive the following features:
+        </p>
+        <ul>
+            <li>
+                Save your data for each day of the week
+            </li>
+            <li>
+                Track your progress with weight and body fat
+            </li>
+            <li>
+                Find your energy expenditure and needs more precisely with exercise calculations
+            </li>
+            <li>
+                Easy reference - week at a glance
+            </li>
+        </ul>
+        <p>
+            Upgrade to pro, and be among the first to be invited to the Keto Mate Diet Companion beta!
+        </p>
+        <ion-item class="centerAlign">
+            <button ion-button (click)="openPro()" class="proButton">
+                Go Pro!
+            </button>
+        </ion-item>
+        <p>
+            The Keto Mate Diet Companion will be your one stop resource for the Keto diet, with features such as:
+        </p>
+        <ul>
+            <li>
+                Track your macros, calories, and most important nutrients with a tracker designed for the keto diet
+            </li>
+            <li>
+                Eat well with a continuously updated Keto friendly recipe database
+            </li>
+            <li>
+                Simplify your diet with weekly meal planning with personalized suggestions
+            </li>
+            <li>
+                Reduce your workload with the ability to generate grocery lists based on your meal plans
+            </li>
+        </ul>
+        <p>
+            Active beta users will receive a complementary six month subscription on full release!
+        </p>
+    </ion-card>
+</ion-content>

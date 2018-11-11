@@ -1,0 +1,395 @@
+<ion-header class="ionHeading">
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title padding class="title">Keto Mate</ion-title>
+      <ion-title class="title">Intro to Keto</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content text-wrap id="ketointropage">
+    <ion-card class="shadowless">
+    <ion-slides>
+      <ion-slide>
+        <h1>Disclaimer</h1>
+        <ion-card>
+            <ion-row>
+                <ion-item col-12>
+                  <p>
+                    <strong>This introductory guide is not a replacement for professional medical advice. Follow the guidelines laid out herein at your own risk. If you have any reason to believe that you may need to consult a doctor prior to following the ketogenic diet, please absolutely do so.</strong>
+                  </p>
+                </ion-item>
+            </ion-row>
+        </ion-card>
+        <ion-row>
+            <ion-item col-6>
+            </ion-item>
+            <ion-item col-6 class="rightAlign">
+              <button ion-button (click)="nextSlide()" class="slideButton">
+                Next
+              </button>
+            </ion-item>
+          </ion-row>
+      </ion-slide>
+      <ion-slide>
+          <h1>Overview</h1>
+          <ion-card>
+              <ion-row>
+                  <ion-item col-12>
+                    <p>
+                      While this app is primarily a calculator, we felt it would be good to include a small guide on keto for those curious and not yet decided. The reading that follows can be information dense, but the majority of what you need to know can be found on this page and the next.
+                      <br/>
+                      The ketogenic diet is a low carbohydrate, high fat (LCHF) diet. It relies upon the state of nutritional ketosis to generate ketones as a source of fuel for your body. 
+                      <br/>
+                      It is not a catch-all term for all low carbohydrate diets, which may emcompass a number of diets utilizing the restriction of carbohydrates, but a specific subset that utilizes (as a general rule) less than 30 grams of carbohydrates in a day.
+                      <br/>
+                      This diet is very heavy on the emphasis of macronutrients rather than simply calories-in calories-out (CICO). Calories are still absolutely important, and you can't just simply eat all that you want and lose weight just because you're on the ketogenic diet.
+                    </p>
+                  </ion-item>
+              </ion-row>
+          </ion-card>
+          <ion-row>
+              <ion-item col-6>
+                <button ion-button (click)="prevSlide()" class="slideButton">
+                  Previous
+                </button>
+              </ion-item>
+              <ion-item col-6 class="rightAlign">
+                <button ion-button (click)="nextSlide()" class="slideButton">
+                   Next
+                </button>
+              </ion-item>
+            </ion-row>
+        </ion-slide>
+      <ion-slide>
+          <h1>Slimming it Down</h1>
+          <ion-card>
+              <ion-row>
+                  <ion-item col-12>
+                    <p>
+                        To start it off, here are the basics of what you need to know:
+                    </p>
+                    <ion-list>
+                      <ion-item>
+                        <p>
+                          Carbohydrate intake - less than 5% of your caloric intake ~ 25 grams or less per day NOT counting dietary fiber
+                        </p>
+                      </ion-item>
+                      <ion-item>
+                        <p>
+                          Protein intake - 0.7g to 1.1g per pound of lean body mass, depending on your goals
+                        </p>
+                      </ion-item>
+                      <ion-item>
+                        <p>
+                          Fat intake - fill to meet your caloric goals, lower to lose weight, increase to build muscle
+                        </p>
+                      </ion-item>
+                      <ion-item>
+                        <p>
+                          Keto adaptation - the full process of teaching your body to rely upon ketones for energy instead of carbohydrates
+                        </p>
+                      </ion-item>
+                      <ion-item>
+                        <p>
+                          Exercise - very much recommended as part of a healthy lifestyle and WILL accelerate weight loss when used in conjunction with a weight loss focused keto diet, though is not necessary for weight loss on a ketogenic diet
+                        </p>
+                      </ion-item>
+                      <ion-item>
+                        <p>
+                          Keto flu - a temporary condition many experience when first beginning a ketogenic diet, associated with mild flu-like symptoms, often lasting a few days and can be helped with increased electrolyte intake
+                        </p>
+                      </ion-item>
+                    </ion-list>
+                    <p>
+                      The next sections are very information heavy. Feel free to read as much or as little as you're comfortable with.
+                    </p>
+                  </ion-item>
+              </ion-row>
+          </ion-card>
+          <ion-row>
+              <ion-item col-6>
+                <button ion-button (click)="prevSlide()" class="slideButton">
+                  Previous
+                </button>
+              </ion-item>
+              <ion-item col-6 class="rightAlign">
+                <button ion-button (click)="nextSlide()" class="slideButton">
+                   Next
+                </button>
+              </ion-item>
+            </ion-row>
+        </ion-slide>
+      <ion-slide>
+        <h1>Macronutrient Overview</h1>
+        <ion-card>
+            <ion-row>
+                <ion-item col-12>
+                  <p>
+                    The three main building blocks of nutrition are known as the macronutrients - carbohydrates, protein, and fat. These provide your body with the fuel it needs to stay alive. Macronutrient intake is the primary driver of calorie intake, and while calorie intake can be calculated from macronutrient intake, macronutrient intake can't be simply derived from calorie intake.
+                    <br/>
+                    While macronutrient intake is more important on a ketogenic diet, overall caloric intake is still extremely important for weightloss. Weightloss is done, first and foremost, in the kitchen. If every meal consists of three sticks of butter, no amount of exercise or keto adaptation will allow you to lose weight.
+                  </p>
+                </ion-item>
+            </ion-row>
+        </ion-card>
+        <ion-row>
+            <ion-item col-6>
+              <button ion-button (click)="prevSlide()" class="slideButton">
+                Previous
+              </button>
+            </ion-item>
+            <ion-item col-6 class="rightAlign">
+              <button ion-button (click)="nextSlide()" class="slideButton">
+                 Next
+              </button>
+            </ion-item>
+          </ion-row>
+      </ion-slide>
+      <ion-slide>
+          <h1>Carbohydrates</h1>
+          <ion-card>
+              <ion-row>
+                  <ion-item col-12>
+                    <p>
+                      Carbohydrates are the standard staple of the western diet. Breads, pasta, rice, pastries, and sweets of all kinds are primarily composed of carbohydrates. The ketogenic diet is very counter-intiutive from the standpoint of normal western dietary advice, as it emphasizes a very low carb intake. Carbohydrates can be broken into two main groups when it comes to ketogenic nutrition:
+                    </p>
+                    <ion-list>
+                      <ion-item>
+                      <p>
+                        Fiber: Dietary fiber is not anti-ketogenic and it is still very much recommended to get your normal dietary recommendation of fiber each day while doing a ketogenic diet.
+                      </p>
+                    </ion-item>
+                    <ion-item>
+                      <p>
+                        Net Carbs: Net carbohydrates are all other carbohydrates than fiber. While there are other subsections of net carbs, all of them are 100% anti-ketogenic and eating past a certain amount of net carbs will take your body out of ketosis, plain and simple.
+                      </p>
+                    </ion-item>
+                    <ion-item>
+                      <p>
+                        Rule of Thumb: Less than 5% of your total caloric intake should be carbohydrates per day, amounting to 25g or less for most people. Your primary source of carbohydrates on a ketogenic diet should be vegetables.
+                      </p>
+                    </ion-item>
+                    </ion-list>
+                  </ion-item>
+              </ion-row>
+          </ion-card>
+          <ion-row>
+              <ion-item col-6>
+                <button ion-button (click)="prevSlide()" class="slideButton">
+                  Previous
+                </button>
+              </ion-item>
+              <ion-item col-6 class="rightAlign">
+                <button ion-button (click)="nextSlide()" class="slideButton">
+                   Next
+                </button>
+              </ion-item>
+            </ion-row>
+        </ion-slide>
+        <ion-slide>
+            <h1>Protein</h1>
+            <ion-card>
+                <ion-row>
+                    <ion-item col-12>
+                      <p>
+                          Protein is the primary building block of all the cells in your body, not just muscles. You need to maintain sufficient protein intake as part of any diet, not just a ketogenic diet. While some keto resources claim that protein intake can interfere with a ketogenic diet due to glycogenesis, research indicates that such effects are difficult to produce and require a very high level of protein.
+                      </p>
+                      <ion-list>
+                          <ion-item>
+                              <p>
+                            Rule of Thumb: Protein intake really should be individual specific, dictated by lean body mass. 0.7g to 1.1g per pound of lean boy mass is sufficient for the majority of individuals. Intake of over 0.9g of protein per pound should only be done if you're actively pursuing muscle growth.
+                          </p>
+                        </ion-item>
+                      </ion-list>
+                    </ion-item>
+                </ion-row>
+            </ion-card>
+            <ion-row>
+                <ion-item col-6>
+                  <button ion-button (click)="prevSlide()" class="slideButton">
+                    Previous
+                  </button>
+                </ion-item>
+                <ion-item col-6 class="rightAlign">
+                  <button ion-button (click)="nextSlide()" class="slideButton">
+                     Next
+                  </button>
+                </ion-item>
+              </ion-row>
+          </ion-slide>
+          <ion-slide>
+              <h1>Fat</h1>
+              <ion-card>
+                  <ion-row>
+                      <ion-item col-12>
+                        <p>
+                            Fat is the traditional bogeyman of the nutrional world, and why not? When you're not eating properly, you get fat. Fat makes you fat, right? And sugar makes you sweet, right? Wait, what? No. Excessive caloric intake makes you fat, no matter the source it comes from. Fat is a source of energy and fuel, just like carbohydrates. Fats are split into three main groups:
+                        </p>
+                        <ion-list>
+                          <ion-item>
+                            <p>
+                            Saturated Fat: Butter, coconut oil, and animal fats are good examples of saturated fats. Saturated fats are quickly oxidized into energy while in a ketogenic state.
+                          </p>
+                        </ion-item>
+                        <ion-item>
+                          <p>
+                            Monounsaturated Fat: Olive oil, almond oil, and canola oil are good examples of monounsaturated fats. Even in traditional western nutrition, the benefits of these fats are well acknowledged.
+                          </p>
+                        </ion-item>
+                        <ion-item>
+                            <p>
+                            Polyunsaturated Fat: Corn oil, soy oil, and grape seed oil are examples of polyunsaturated fat. These are NOT a recommended type of fat to eat, even when on a ketogenic diet.
+                            </p>
+                        </ion-item>
+                        <ion-item>
+                          <p>
+                            Rule of Thumb: Fat intake is not a GOAL in a ketogenic diet. Carbohydrates are restricted, protein is met, and fat is the filler. When calculating your calorie needs, fat meets the gap between the calories consumed from the restricted carbs and the necessary protein. 
+                          </p>
+                        </ion-item>
+                        </ion-list>
+                      </ion-item>
+                  </ion-row>
+              </ion-card>
+              <ion-row>
+                  <ion-item col-6>
+                    <button ion-button (click)="prevSlide()" class="slideButton">
+                      Previous
+                    </button>
+                  </ion-item>
+                  <ion-item col-6 class="rightAlign">
+                    <button ion-button (click)="nextSlide()" class="slideButton">
+                       Next
+                    </button>
+                  </ion-item>
+                </ion-row>
+    </ion-slide>
+    <ion-slide>
+        <h1>Keto Adaptation</h1>
+        <ion-card>
+            <ion-row>
+                <ion-item col-12>
+                  <p>
+                    The ketogenic diet's goal is to ultimately switch your body's primary source of fuel from carbohydrates to ketones. The four main body fuels are glucose, free fatty acids, ketones, and protein. Your body's "default" fuel state is to utilize glucose for almost everything. Of course, carbohydrates are your biggest source of glucose.
+                    <br/>
+                    Once glucose intake starts dropping below about 100g per day, your body starts looking for alternative sources of fuel. Free fatty acids (FFA) can be used for most tissues in your body. Your brain can't, and is the primary driver of entering the state of ketogenesis. The primary steps in keto adaptation are as follows:
+                    <ion-list>
+                      <ion-item>
+                        <p>
+                          During the first three days, your blood glucose and insulin levels drop slowly, reaching a new equilibrium around the third day. During this same period, your liver ramps up its production of ketones, reaching its maximum at the third day as well.
+                        </p>
+                      </ion-item>
+                      <ion-item>
+                        <p>
+                          Your muscles and a few other tissues quick to adapt will begin using ketones right away. After the third day, your brain begins using ketones for fuel. This is when you'll notice your energy levels pick back up. As this progresses, your other body tissues will make more use of FFA.
+                        </p>
+                      </ion-item>
+                      <ion-item>
+                        <p>
+                          Once your body has been in a ketogenic state for three weeks, you've reached your most adapted state. Your brain receives 75% of its fuel from ketones, not in short bursts like with glucose, but in a steady stream. Your other bodily tissues will now take over 90% of their fuel from FFA.
+                        </p>
+                      </ion-item>
+                    </ion-list>
+                  </p>
+                </ion-item>
+            </ion-row>
+        </ion-card>
+        <ion-row>
+            <ion-item col-6>
+              <button ion-button (click)="prevSlide()" class="slideButton">
+                Previous
+              </button>
+            </ion-item>
+            <ion-item col-6 class="rightAlign">
+              <button ion-button (click)="nextSlide()" class="slideButton">
+                 Next
+              </button>
+            </ion-item>
+          </ion-row>
+      </ion-slide>
+      <ion-slide>
+          <h1>Exercise Overview</h1>
+          <ion-card>
+              <ion-row>
+                  <ion-item col-12>
+                    <p>
+                        Exercise is, for the most part, outside of the purview of this app. It is absolutely the recommendation of Keto Mate for you to engage in exercise while on a ketogenic diet, though results are entirely possible without a regular exercise routine.
+                      <br/>
+                        The recommendation of the Keto Mate team is that, if your body is capable of it, to perform any exercise routine supplementary to a ketogenic diet as a High Intensity Interval Training (HIIT) routine, with appropriate periods of warm-up, intense training, rest, and cool-down. Our knowledge leads us to believe this to be the most effective exercise structure for weightloss.
+                      <br/>
+                        That being said, this advice is not meant to be a sole source of information about exercise. It is absolutely our recommendation for you to seek out your own information on what exercise routine will best work for you - after all, the best exercise routine is one that you can stick to.
+                    </p>
+                  </ion-item>
+              </ion-row>
+          </ion-card>
+          <ion-row>
+              <ion-item col-6>
+                <button ion-button (click)="prevSlide()" class="slideButton">
+                  Previous
+                </button>
+              </ion-item>
+              <ion-item col-6 class="rightAlign">
+                <button ion-button (click)="nextSlide()" class="slideButton">
+                   Next
+                </button>
+              </ion-item>
+            </ion-row>
+        </ion-slide>
+        <ion-slide>
+            <h1>Keto Flu</h1>
+            <ion-card>
+                <ion-row>
+                    <ion-item col-12>
+                      <p>
+                          Something to be aware of when first starting a ketogenic diet is the appearance of symptoms generally referred to as the "Keto Flu" within the community. When your body is adapted over long periods of time to being reliant upon carbohydrates for energy, there's an adaptation period usually of 3-4 days of low energy, fatigue, and lightheadedness. 
+                        <br/>
+                          The general assessment of these symptoms are that they are considered an inconvenience rather than a significant hurdle. These symptoms are temporary and will pass in almost all cases. If they do not pass within a week, or if they seem excessive in intensity, please do seek the help of a medical professional. If in doubt, please seek the advice of a medical professional before beginning a ketogenic diet.
+                      </p>
+                    </ion-item>
+                </ion-row>
+            </ion-card>
+            <ion-row>
+                <ion-item col-6>
+                  <button ion-button (click)="prevSlide()" class="slideButton">
+                    Previous
+                  </button>
+                </ion-item>
+                <ion-item col-6 class="rightAlign">
+                    <button ion-button (click)="nextSlide()" class="slideButton">
+                       Next
+                    </button>
+                  </ion-item>
+              </ion-row>
+          </ion-slide>
+          <ion-slide>
+              <h1>What Now?</h1>
+              <ion-card>
+                  <ion-row>
+                      <ion-item col-12>
+                        <p>
+                          That was quite a lot of information to take in. You might be questioning if the keto diet is for you, if you have to know all this, right?
+                          <br/>
+                          The good news is that you really don't. This information is here for your curiosity, not your necessity.
+                          <br/>
+                          Our recommendation, is to let the calculator figure out what you need to do to get started. You can always come back and read some more.
+                        </p>
+                      </ion-item>
+                  </ion-row>
+              </ion-card>
+              <ion-row>
+                  <ion-item col-6>
+                    <button ion-button (click)="prevSlide()" class="slideButton">
+                      Previous
+                    </button>
+                  </ion-item>
+                  <ion-item col-6 class="rightAlign">
+                    <button ion-button (click)="restart()" class="slideButton">
+                       Beginning
+                    </button>
+                  </ion-item>
+                </ion-row>
+            </ion-slide>
+    </ion-slides>
+  </ion-card>
+</ion-content>

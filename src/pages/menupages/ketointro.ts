@@ -4,11 +4,11 @@ import { NavController, Slides, Content } from 'ionic-angular';
 import { IonicPage } from 'ionic-angular';
 @IonicPage()
 @Component({
-  selector: 'page-ketofaq',
-  templateUrl: 'ketofaq.html'
+  selector: 'page-ketointro',
+  templateUrl: 'ketointro.html'
 })
 
-export class KetoFAQPage implements OnInit {
+export class KetoIntroPage implements OnInit {
 
   @ViewChild(Slides) slides: Slides;
   @ViewChild(Content) content: Content;
